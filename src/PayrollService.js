@@ -13,14 +13,14 @@ class employeeService{
         return Axios.get(`${this.baseUrl}/get/getall`);
       }
       updateEmployee(data) {
-        return Axios.put(`${this.baseUrl}/${data.id}`, data);
+        return Axios.put(`${this.baseUrl}/update/${data.employeeId}`, data);
       }
     
       getEmployee(id) {
         return Axios.get(`${this.baseUrl}/get/${id}`);
       }
       deleteEmployee(id) {
-        return Axios.delete(`${this.baseUrl}/${id}`);
+        return Axios.delete(`${this.baseUrl}/delete/${id}`);
       }
     
 }

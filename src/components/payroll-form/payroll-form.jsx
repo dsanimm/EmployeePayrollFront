@@ -119,10 +119,10 @@ const PayrollForm = (props) => {
       isError = true;
     }
 
-    if (formValue.departMentValue.length < 1) {
-      error.department = "Department is a required field";
-      isError = true;
-    }
+   // if (formValue.departMentValue.length < 1) {
+    //  error.department = "Department is a required field";
+   //   isError = true;
+  //  }
     await setForm({ ...formValue, error: error });
     return isError;
   };
@@ -139,7 +139,7 @@ const PayrollForm = (props) => {
       salary: formValue.salary,
       startDate: `${formValue.day} ${formValue.month} ${formValue.year}`,
       note: formValue.note,
-      id: formValue.id,
+      employeeId: params.id,
       profilePic: formValue.profilePic,
     };
 
