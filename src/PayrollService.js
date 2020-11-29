@@ -9,6 +9,15 @@ class employeeService{
         console.log(this.baseUrl);
         return Axios.post(this.baseUrl,data);
     }
-
+    getAllEmployee() {
+        return Axios.get(this.baseUrl);
+      }
+      getEmployee(id) {
+        return Axios.get(`${this.baseUrl}/${id}`);
+      }
+      deleteEmployee(id) {
+        return Axios.delete(`${this.baseUrl}/${id}`);
+      }
+    
 }
 export default employeeService
