@@ -11,7 +11,7 @@ function App() {
         <>
       <Router>
         <Switch>
-          <Route path="">
+          <Route>
             <Employee />
           </Route>
         </Switch>
