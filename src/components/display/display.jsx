@@ -10,6 +10,14 @@ import { withRouter } from "react-router-dom";
 import EmployeeService from "../../PayrollService";
 
 const Display = (props) => {
+  
+  const employeeService = new EmployeeService();
+  const update = (employeeId) => {
+    //this.router.navigateByUrl(`payroll-form/${employeeId}`);
+    props.history.push(`payroll-form/${employeeId}`);
+    console.log('${employeeId}');
+  };
+
   return (
     <table id="display" className="display">
       <tbody>
@@ -29,13 +37,13 @@ const Display = (props) => {
                 <img
                   className="profile"
                   src={
-                    element.profileUrl ===
+                    element.profilePic ===
                     "../../assets/profile-images/Ellipse -3.png"
                       ? profile1
-                      : element.profileUrl ===
+                      : element.profilePic ===
                         "../../assets/profile-images/Ellipse -1.png"
                       ? profile2
-                      : element.profileUrl ===
+                      : element.profilePic ===
                         "../../assets/profile-images/Ellipse -8.png"
                       ? profile3
                       : profile4
@@ -55,7 +63,11 @@ const Display = (props) => {
               <td>{element.startDate}</td>
               <td>
                 <img src={deleteIcon} alt="delete" />
-                <img src={editIcon} alt="edit" />
+                <img
+                  onClick={() => update(element.employeeId)}
+                  src={editIcon}
+                  alt="edit"
+                />
               </td>
             </tr>
           ))}
