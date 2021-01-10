@@ -58,7 +58,7 @@ export default class Home extends React.Component {
         <div className="column content">
           <div className="emp-detail">
             <div className="detail-text">
-              Employee Details <div className="count"></div>
+              Details anything <div className="count"></div>
             </div>
             <div className="row center button-box">
               <div className="search-box" onClick={this.openSearch}>

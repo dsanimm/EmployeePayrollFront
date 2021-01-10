@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route exact path="/payroll-form">
@@ -22,7 +22,7 @@ function App() {
             <PayrollForm />
           </Route>
           <Route exact path="">
-            <Redirect exact from="/" to="/home" />
+            <Redirect exact from="/" to="/" />
           </Route>
         </Switch>
       </Router>

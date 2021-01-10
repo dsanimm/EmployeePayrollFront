@@ -13,7 +13,6 @@ const Display = (props) => {
   
   const employeeService = new EmployeeService();
   const update = (employeeId) => {
-    //this.router.navigateByUrl(`payroll-form/${employeeId}`);
     props.history.push(`payroll-form/${employeeId}`);
     console.log('${employeeId}');
   };
